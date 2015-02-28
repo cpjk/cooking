@@ -4,7 +4,7 @@ config :cooking, Cooking.Endpoint,
   url: [host: "example.com"],
   http: [port: System.get_env("PORT")],
   secret_key_base: "QGFlMKO+a4n82ZPYQtY+lk3ayRaQKKk6mkQgakMdqwObdRjFBSvebrJY+Nk354vY"
-  
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
