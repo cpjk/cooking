@@ -11,6 +11,9 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  /* background-image: url("http://upload.wikimedia.org/wikipedia/commons/f/fb/Allium_sativum._Restra_de_allos_de_Oroso-_Galiza.jpg"); */
+  background-image: url("/images/garlic-1920x1080.svg");
+  background-size: cover;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
