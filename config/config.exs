@@ -12,6 +12,12 @@ config :cooking, Cooking.Endpoint,
   debug_errors: false,
   pubsub: [adapter: Phoenix.PubSub.PG2]
 
+config :cooking, Cooking.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "cooking_dev",
+  username: "cooking",
+  password: "",
+  hostname: "localhost"
 
 # Configures Elixir's Logger
 config :logger, :console,
