@@ -1,5 +1,5 @@
 defmodule Cooking.PageController do
-  use Phoenix.Controller
+  use Cooking.Web, :controller
 
   plug :action
 

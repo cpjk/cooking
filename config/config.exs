@@ -10,7 +10,10 @@ config :cooking, Cooking.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "QGFlMKO+a4n82ZPYQtY+lk3ayRaQKKk6mkQgakMdqwObdRjFBSvebrJY+Nk354vY",
   debug_errors: false,
-  pubsub: [adapter: Phoenix.PubSub.PG2]
+  pubsub: [
+    name: Cooking.PubSub,
+    adapter: Phoenix.PubSub.PG2
+  ]
 
 config :cooking, Cooking.Repo,
   adapter: Ecto.Adapters.Postgres,

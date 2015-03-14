@@ -1,5 +1,5 @@
 defmodule Cooking.ErrorView do
-  use Cooking.View
+  use Cooking.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found - 404"

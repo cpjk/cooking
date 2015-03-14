@@ -1,3 +1,3 @@
 defmodule Cooking.PageView do
-  use Cooking.View
+  use Cooking.Web, :view
 end

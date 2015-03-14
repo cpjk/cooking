@@ -1,3 +1,3 @@
 defmodule Cooking.HomeView do
-  use Cooking.View
+  use Cooking.Web, :view
 end
