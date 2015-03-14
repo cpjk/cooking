@@ -27,8 +27,9 @@ defmodule Cooking.Mixfile do
   defp deps do
     [{:phoenix, "~> 0.10.0"},
      {:cowboy, "~> 1.0"},
-     { :postgrex, "~> 0.7.0" },
-     { :ecto, "~> 0.8.1" }
+     { :postgrex, "~> 0.8.0" },
+     { :ecto, "~> 0.9.0" },
+     { :phoenix_ecto, "~> 0.1" },
    ]
   end
 end
