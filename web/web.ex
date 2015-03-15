@@ -37,6 +37,9 @@ defmodule Cooking.Web do
 
   def model do
     quote do
+      use Ecto.Model
+
+      alias Cooking.Repo
     end
   end
 
