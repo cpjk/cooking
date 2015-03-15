@@ -16,7 +16,7 @@ defmodule Cooking.Mixfile do
   def application do
     [mod: {Cooking, []},
       applications: [
-       :phoenix, :cowboy, :logger
+       :phoenix, :cowboy, :logger, :comeonin
       ]
     ]
   end
@@ -30,6 +30,7 @@ defmodule Cooking.Mixfile do
      { :postgrex, "~> 0.8.0" },
      { :ecto, "~> 0.9.0" },
      { :phoenix_ecto, "~> 0.1" },
+     { :comeonin, "~> 0.3" }
    ]
   end
 end
