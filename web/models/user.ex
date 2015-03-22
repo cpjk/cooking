@@ -18,6 +18,10 @@ defmodule Cooking.User do
     |> validate_unique(:email, on: Repo)
   end
 
+  def changeset(user, params \\ nil) do
+    cast(user, params, ~w(first_name last_name hashed_password email))
+  end
+
   defp hashed_password(password), do: Comeonin.Bcrypt.hashpwsalt(password)
 
   defp processed_params(params) do
