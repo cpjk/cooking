@@ -22,6 +22,12 @@ config :cooking, Cooking.Repo,
   password: "",
   hostname: "localhost"
 
+config :cooking, Cooking.Router,
+  session: [
+    store: :cookie,
+    key: "changeme"
+  ]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
