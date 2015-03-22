@@ -19,7 +19,7 @@ defmodule Cooking.User do
   end
 
   def changeset(user, params \\ nil) do
-    cast(user, params, ~w(first_name last_name hashed_password email))
+    cast(user, params, ~w(first_name last_name password email))
   end
 
   defp hashed_password(password), do: Comeonin.Bcrypt.hashpwsalt(password)
