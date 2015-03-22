@@ -17,6 +17,6 @@ defmodule Cooking.Router do
 
     get "/", HomeController, :index
 
-    resources "users", UserController, only: [:new, :create, :edit]
+    resources "users", UserController
   end
 end
