@@ -1,1 +1,5 @@
-<%= render "_form.html", changeset: @changeset %>
+<div class="row">
+  <div class="col-md-12">
+    <%= render "_form.html", changeset: @changeset %>
+  </div>
+</div>
