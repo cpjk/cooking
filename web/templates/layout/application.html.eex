@@ -8,8 +8,10 @@
     <meta name="author" content="Chris Kelly">
 
     <title>Daniel Rigollet</title>
-    <link rel="stylesheet" href="/css/phoenix.css">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
+
+  <script>require("web/static/js/app")</script>
 
   <body>
     <div class="container">
