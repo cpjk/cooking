@@ -16,9 +16,12 @@
       <div class="page-header">
         <h1> Daniel Rigollet </h1>
       </div>
-
-      <%= @inner %>
-
+      <div class="flash">
+        <%= get_flash @conn, :notice %>
+      </div>
+      <div class="jumbotron">
+        <%= @inner %>
+      </div>
       <div class="footer">
       </div>
 

@@ -1,0 +1,27 @@
+<%= form_for @changeset, user_path(@conn, :create), fn f -> %>
+  <div class="first-name-input">
+    <label>
+      First Name: <%= text_input f, :first_name %>
+    </label>
+  </div>
+  <div class="last-name-input">
+    <label>
+      Last Name: <%= text_input f, :last_name %>
+    </label>
+  </div>
+  <div class="email-input">
+    <label>
+      Email: <%= text_input f, :email %>
+    </label>
+  </div>
+  <div class="password-input">
+    <label>
+      Password: <%= text_input f, :password, type: :password %>
+    </label>
+  </div>
+  <div class="submit">
+    <label>
+      Submit: <%= submit "Submit" %>
+    </label>
+  </div>
+<% end %>
