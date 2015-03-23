@@ -1,3 +1,5 @@
-<div class="jumbotron">
-  <div class="summary">Daniel is a chef!</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="summary">Daniel is a chef!</div>
+  </div>
 </div>
