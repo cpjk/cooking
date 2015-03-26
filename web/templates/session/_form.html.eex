@@ -1,0 +1,16 @@
+<form accept-charset="UTF-8" action="/session", method="POST">
+  <div class="form-group">
+    <label for="email-input">
+      Email
+    </label>
+    <input name="session[email]", class="form-control", id="email-input", type="email">
+  </div>
+  <div class="form-group">
+    <label for="password-input">
+      Password
+    </label>
+    <input name="session[password]", class="form-control", id="password-input", type="password">
+  </div>
+  <input type="hidden" name="_csrf_token", value="<%= get_csrf_token %>">
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
