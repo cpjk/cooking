@@ -24,7 +24,6 @@
         <%= @inner %>
       <div class="footer">
       </div>
-
     </div> <!-- /container -->
   </body>
 </html>
