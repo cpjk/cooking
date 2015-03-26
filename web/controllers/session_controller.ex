@@ -14,31 +14,18 @@ defmodule Cooking.SessionController do
   end
 
   def create(conn, params) do
-    case try_login(params["session"]) do
-      true ->
-        put_flash(conn, :notice, "You have been logged in successfully.")
+    case User.login(params["session"]) do
+      user = %User{} ->
+        conn
+        |> put_session(:user_id, user.id)
+        |> put_flash(:notice, "You have been logged in successfully.")
       false ->
-        put_flash(conn, :notice, "Email/password combination is incorrect.")
+        conn
+        |> put_flash(:notice, "Email/password combination is incorrect.")
     end
-    |> redirect to: Cooking.Router.Helpers.user_path(Endpoint, :index)
+    |> redirect to: user_path(Endpoint, :index)
   end
 
   def delete(conn, _params) do
   end
-
-  defp try_login(%{"email" => email, "password" => password}) do
-    user_with_email = Repo.one(User.by_email(email))
-
-    case user_with_email do
-      %User{hashed_password: hashed_password} ->
-        Comeonin.Bcrypt.checkpw(password, hashed_password)
-      _ ->
-        Comeonin.Bcrypt.dummy_checkpw
-    end
-  end
-
-  defp try_login(%{}) do
-    Comeonin.Bcrypt.dummy_checkpw
-  end
-
 end

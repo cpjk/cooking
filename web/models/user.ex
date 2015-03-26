@@ -2,6 +2,7 @@ defmodule Cooking.User do
   use Cooking.Web, :model
 
   alias Cooking.User
+  import Comeonin.Bcrypt
 
   schema "users" do
     field :first_name
@@ -24,9 +25,21 @@ defmodule Cooking.User do
   end
 
   def by_email(email) do
-    from u in User,
+    q = from u in User,
     where: u.email == ^email,
     select: u
+    Repo.one(q)
+  end
+
+  def login(%{"email" => email, "password" => password}) do
+    email
+    |> by_email
+    |> test_password(password)
+  end
+
+  defp test_password(nil, _), do: dummy_checkpw
+  defp test_password(user = %User{}, password) do
+    checkpw(password, user.hashed_password) && user
   end
 
   defp hashed_password(password), do: Comeonin.Bcrypt.hashpwsalt(password)
