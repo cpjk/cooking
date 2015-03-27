@@ -25,10 +25,10 @@ defmodule Cooking.User do
   end
 
   def by_email(email) do
-    q = from u in User,
-    where: u.email == ^email,
-    select: u
-    Repo.one(q)
+    User
+    |> where([u], u.email == ^email)
+    |> select([u], u)
+    |> Repo.one
   end
 
   def login(%{"email" => email, "password" => password}) do
