@@ -1,5 +1,10 @@
 <div class="row">
   <div class="col-md-12">
+    <%= if @current_user do %>
+      <%= "current user: #{@current_user.first_name}" %>
+    <% else %>
+      No user logged in
+    <% end %>
     <div class="summary">Daniel is a chef!</div>
   </div>
 </div>

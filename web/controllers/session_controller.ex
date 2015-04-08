@@ -4,8 +4,6 @@ defmodule Cooking.SessionController do
   alias Cooking.User
   alias Cooking.Repo
 
-  import Elixir.IEx
-
   plug :action
 
   def new(conn, _params) do
