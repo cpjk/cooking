@@ -5,7 +5,11 @@
 ```
 $ git clone git@github.com:cpjk/cooking.git
 
+$ cd cooking
+
 $ mix do deps.get, compile 
+
+$ npm install
 
 $ mix phoenix.server start
 
