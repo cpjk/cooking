@@ -22,13 +22,14 @@ defmodule Cooking.Web do
       # Import all HTML functions (forms, tags, etc)
       use Phoenix.HTML
 
-      # Functions defined here are available to all other views/templates
     end
   end
 
   def controller do
     quote do
       use Phoenix.Controller
+      use Cooking.AssignsHelpers
+      use Cooking.SessionHelpers
 
       # Import URL helpers from the router
       import Cooking.Router.Helpers
