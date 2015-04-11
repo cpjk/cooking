@@ -5,4 +5,8 @@
 
 .container {
   padding-top: 15px;
+  box-sizing: border-box;
+  border: 5px solid;
+  border-color: #f7f7f7;
+  border-radius: 5px;
 }
