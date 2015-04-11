@@ -25,5 +25,8 @@ defmodule Cooking.SessionController do
   end
 
   def delete(conn, _params) do
+    conn
+    |> put_session(:user_id, nil)
+    |> redirect to: home_path(conn, :index)
   end
 end
