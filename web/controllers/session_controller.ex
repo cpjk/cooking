@@ -21,7 +21,7 @@ defmodule Cooking.SessionController do
         conn
         |> put_flash(:notice, "Email/password combination is incorrect.")
     end
-    |> redirect to: user_path(Endpoint, :index)
+    |> redirect to: home_path(conn, :index)
   end
 
   def delete(conn, _params) do
