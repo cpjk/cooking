@@ -7,10 +7,9 @@ config :cooking, Cooking.Endpoint,
   watchers: [{Path.expand("node_modules/brunch/bin/brunch"), ["watch"]}],
   live_reload: [Path.expand("priv/static/js/app.js"),
                 Path.expand("priv/static/css/app.css"),
-                Path.expand("web/templates/**/*.eex")]
-
-# Enables code reloading for development
-config :phoenix, :code_reloader, true
+                Path.expand("web/templates/**/*.eex")
+               ],
+  code_reloader: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

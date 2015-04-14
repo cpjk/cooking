@@ -7,6 +7,7 @@ use Mix.Config
 
 # Configures the endpoint
 config :cooking, Cooking.Endpoint,
+  root: Path.expand("..", __DIR__),
   url: [host: "localhost"],
   secret_key_base: "QGFlMKO+a4n82ZPYQtY+lk3ayRaQKKk6mkQgakMdqwObdRjFBSvebrJY+Nk354vY",
   debug_errors: false,

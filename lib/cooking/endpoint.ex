@@ -27,4 +27,9 @@ defmodule Cooking.Endpoint do
     encryption_salt: "7O1EkaUn"
 
   plug :router, Cooking.Router
+
+  if code_reloading? do
+    plug Phoenix.LiveReloader
+    plug Phoenix.CodeReloader
+  end
 end
