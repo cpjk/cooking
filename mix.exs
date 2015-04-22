@@ -29,8 +29,8 @@ defmodule Cooking.Mixfile do
      { :phoenix, "~> 0.11.0" },
      { :cowboy, "~> 1.0" },
      { :postgrex, "~> 0.8.0" },
-     { :ecto, "~> 0.9.0" },
-     { :phoenix_ecto, "~> 0.1" },
+     { :ecto, "~> 0.10.0" },
+     { :phoenix_ecto, "~> 0.3" },
      { :comeonin, "~> 0.3" },
      { :phoenix_live_reload, "~> 0.3" },
      { :canada, "~> 1.0.0" }
